@@ -51,7 +51,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 2,
-        "template": "      <h1>{{title}}</h1>\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <div><input [(ngModel)]=\"hero.name\" placeholder=\"name\"></div>\n      </div>",
+        "template": "      <h1>{{title}}</h1>\n      <h2>{{hero.name}} details!</h2>\n      <div><label>id: </label>{{hero.id}}</div>\n      <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n      </div>",
         "templateUrl": "asset:angular2_tour_of_heroes/lib/app_component.dart",
         "styles": [],
         "styleUrls": [],
