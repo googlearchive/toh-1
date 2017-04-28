@@ -15,13 +15,6 @@
     "6": "app_component.dart"
   },
   "type": {
-    "Hero": {
-      "class": "Identifier",
-      "name": "Hero",
-      "moduleUrl": "asset:angular_tour_of_heroes/lib/app_component.dart",
-      "prefix": null,
-      "value": null
-    },
     "AppComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -56,6 +49,13 @@
       "viewProviders": [],
       "queries": [],
       "viewQueries": []
+    },
+    "Hero": {
+      "class": "Identifier",
+      "name": "Hero",
+      "moduleUrl": "asset:angular_tour_of_heroes/lib/app_component.dart",
+      "prefix": null,
+      "value": null
     }
   },
   "alias": {}
