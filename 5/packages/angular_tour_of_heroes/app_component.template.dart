@@ -35,15 +35,15 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   import2.Text _text_1;
   import2.Element _el_2;
   import2.Text _text_3;
-  import2.DivElement _el_4;
-  import2.Element _el_5;
-  import2.Text _text_7;
-  import2.DivElement _el_8;
-  import2.Element _el_9;
-  import2.InputElement _el_11;
-  import3.DefaultValueAccessor _DefaultValueAccessor_11_4;
-  List<dynamic> _NgValueAccessor_11_5;
-  import4.NgModel _NgModel_11_6;
+  import2.DivElement _el_5;
+  import2.Element _el_6;
+  import2.Text _text_8;
+  import2.DivElement _el_9;
+  import2.Element _el_10;
+  import2.InputElement _el_12;
+  import3.DefaultValueAccessor _DefaultValueAccessor_12_4;
+  List<dynamic> _NgValueAccessor_12_5;
+  import4.NgModel _NgModel_12_6;
   var _expr_1;
   var _expr_2;
   static RenderComponentType _renderType;
@@ -62,38 +62,40 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     _el_2 = createAndAppend(doc, 'h2', parentRenderNode);
     _text_3 = new import2.Text('');
     _el_2.append(_text_3);
-    _el_4 = createDivAndAppend(doc, parentRenderNode);
-    _el_5 = createAndAppend(doc, 'label', _el_4);
-    import2.Text _text_6 = new import2.Text('id:');
-    _el_5.append(_text_6);
-    _text_7 = new import2.Text('');
-    _el_4.append(_text_7);
-    _el_8 = createDivAndAppend(doc, parentRenderNode);
-    _el_9 = createAndAppend(doc, 'label', _el_8);
-    import2.Text _text_10 = new import2.Text('name:');
-    _el_9.append(_text_10);
-    _el_11 = createAndAppend(doc, 'input', _el_8);
-    createAttr(_el_11, 'placeholder', 'name');
-    _DefaultValueAccessor_11_4 = new import3.DefaultValueAccessor(_el_11);
-    _NgValueAccessor_11_5 = [_DefaultValueAccessor_11_4];
-    _NgModel_11_6 = new import4.NgModel(null, _NgValueAccessor_11_5);
-    _el_11.addEventListener('input', eventHandler1(_handle_input_11_1));
-    _el_11.addEventListener('blur', eventHandler0(_DefaultValueAccessor_11_4.touchHandler));
-    final subscription_0 = _NgModel_11_6.update.listen(eventHandler1(_handle_ngModelChange_11_0));
+    import2.Text _text_4 = new import2.Text(' details!');
+    _el_2.append(_text_4);
+    _el_5 = createDivAndAppend(doc, parentRenderNode);
+    _el_6 = createAndAppend(doc, 'label', _el_5);
+    import2.Text _text_7 = new import2.Text('id:');
+    _el_6.append(_text_7);
+    _text_8 = new import2.Text('');
+    _el_5.append(_text_8);
+    _el_9 = createDivAndAppend(doc, parentRenderNode);
+    _el_10 = createAndAppend(doc, 'label', _el_9);
+    import2.Text _text_11 = new import2.Text('name:');
+    _el_10.append(_text_11);
+    _el_12 = createAndAppend(doc, 'input', _el_9);
+    createAttr(_el_12, 'placeholder', 'name');
+    _DefaultValueAccessor_12_4 = new import3.DefaultValueAccessor(_el_12);
+    _NgValueAccessor_12_5 = [_DefaultValueAccessor_12_4];
+    _NgModel_12_6 = new import4.NgModel(null, _NgValueAccessor_12_5);
+    _el_12.addEventListener('input', eventHandler1(_handle_input_12_1));
+    _el_12.addEventListener('blur', eventHandler0(_DefaultValueAccessor_12_4.touchHandler));
+    final subscription_0 = _NgModel_12_6.update.listen(eventHandler1(_handle_ngModelChange_12_0));
     init(const [], [subscription_0]);
     return null;
   }
 
   @override
   dynamic injectorGetInternal(dynamic token, int nodeIndex, dynamic notFoundResult) {
-    if ((identical(token, import3.DefaultValueAccessor) && (11 == nodeIndex))) {
-      return _DefaultValueAccessor_11_4;
+    if ((identical(token, import3.DefaultValueAccessor) && (12 == nodeIndex))) {
+      return _DefaultValueAccessor_12_4;
     }
-    if ((identical(token, const import10.OpaqueToken<import11.ControlValueAccessor<dynamic>>('NgValueAccessor')) && (11 == nodeIndex))) {
-      return _NgValueAccessor_11_5;
+    if ((identical(token, const import10.OpaqueToken<import11.ControlValueAccessor<dynamic>>('NgValueAccessor')) && (12 == nodeIndex))) {
+      return _NgValueAccessor_12_5;
     }
-    if (((identical(token, import4.NgModel) || identical(token, import12.NgControl)) && (11 == nodeIndex))) {
-      return _NgModel_11_6;
+    if (((identical(token, import4.NgModel) || identical(token, import12.NgControl)) && (12 == nodeIndex))) {
+      return _NgModel_12_6;
     }
     return notFoundResult;
   }
@@ -104,32 +106,32 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     bool changed = false;
     bool firstCheck = (this.cdState == 0);
     changed = false;
-    _NgModel_11_6.model = _ctx.hero.name;
-    _NgModel_11_6.ngAfterChanges();
+    _NgModel_12_6.model = _ctx.hero.name;
+    _NgModel_12_6.ngAfterChanges();
     if (firstCheck) {
-      _NgModel_11_6.ngOnInit();
+      _NgModel_12_6.ngOnInit();
     }
     if (firstCheck) {
       (_text_1.text = (_ctx.title ?? ''));
     }
-    final currVal_1 = import8.interpolate1('', _ctx.hero.name, ' details!');
+    final currVal_1 = import8.interpolate0(_ctx.hero.name);
     if (!identical(_expr_1, currVal_1)) {
       _text_3.text = currVal_1;
       _expr_1 = currVal_1;
     }
     final currVal_2 = import8.interpolate0(_ctx.hero.id);
     if (!identical(_expr_2, currVal_2)) {
-      _text_7.text = currVal_2;
+      _text_8.text = currVal_2;
       _expr_2 = currVal_2;
     }
   }
 
-  void _handle_ngModelChange_11_0($event) {
+  void _handle_ngModelChange_12_0($event) {
     ctx.hero.name = $event;
   }
 
-  void _handle_input_11_1($event) {
-    _DefaultValueAccessor_11_4.onChange($event.target.value);
+  void _handle_input_12_1($event) {
+    _DefaultValueAccessor_12_4.onChange($event.target.value);
   }
 }
 
