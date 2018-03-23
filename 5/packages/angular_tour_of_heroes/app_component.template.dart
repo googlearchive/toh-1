@@ -41,20 +41,21 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   import3.DefaultValueAccessor _DefaultValueAccessor_12_5;
   List<import4.ControlValueAccessor<dynamic>> _NgValueAccessor_12_6;
   import5.NgModel _NgModel_12_7;
+  var _expr_0;
   var _expr_1;
-  var _expr_2;
   static RenderComponentType _renderType;
-  ViewAppComponent0(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewAppComponent0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import2.document.createElement('my-app');
     _renderType ??= import9.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$AppComponent);
     setupComponentType(_renderType);
   }
   @override
   ComponentRef<import1.AppComponent> build() {
-    final import2.HtmlElement parentRenderNode = initViewRoot(rootEl);
+    final _rootEl = rootEl;
+    final import2.HtmlElement parentRenderNode = initViewRoot(_rootEl);
     var doc = import2.document;
     _el_0 = createAndAppend(doc, 'h1', parentRenderNode);
-    _text_1 = new import2.Text('');
+    _text_1 = new import2.Text((ctx.title ?? ''));
     _el_0.append(_text_1);
     _el_2 = createAndAppend(doc, 'h2', parentRenderNode);
     _text_3 = new import2.Text('');
@@ -108,18 +109,15 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     if (firstCheck) {
       _NgModel_12_7.ngOnInit();
     }
-    if (firstCheck) {
-      (_text_1.text = (_ctx.title ?? ''));
+    final currVal_0 = import9.interpolate0(_ctx.hero.name);
+    if (!identical(_expr_0, currVal_0)) {
+      _text_3.text = currVal_0;
+      _expr_0 = currVal_0;
     }
-    final currVal_1 = import9.interpolate0(_ctx.hero.name);
+    final currVal_1 = import9.interpolate0(_ctx.hero.id);
     if (!identical(_expr_1, currVal_1)) {
-      _text_3.text = currVal_1;
+      _text_8.text = currVal_1;
       _expr_1 = currVal_1;
-    }
-    final currVal_2 = import9.interpolate0(_ctx.hero.id);
-    if (!identical(_expr_2, currVal_2)) {
-      _text_8.text = currVal_2;
-      _expr_2 = currVal_2;
     }
   }
 
@@ -132,7 +130,7 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   }
 }
 
-AppView<import1.AppComponent> viewFactory_AppComponent0(AppView<dynamic> parentView, num parentIndex) {
+AppView<import1.AppComponent> viewFactory_AppComponent0(AppView<dynamic> parentView, int parentIndex) {
   return new ViewAppComponent0(parentView, parentIndex);
 }
 
@@ -141,7 +139,7 @@ const List<dynamic> styles$AppComponentHost = const [];
 class _ViewAppComponentHost0 extends AppView<dynamic> {
   ViewAppComponent0 _compView_0;
   import1.AppComponent _AppComponent_0_5;
-  _ViewAppComponentHost0(AppView<dynamic> parentView, num parentIndex) : super(import7.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewAppComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewAppComponent0(this, 0);
@@ -163,7 +161,7 @@ class _ViewAppComponentHost0 extends AppView<dynamic> {
   }
 }
 
-AppView viewFactory_AppComponentHost0(AppView<dynamic> parentView, num parentIndex) {
+AppView viewFactory_AppComponentHost0(AppView<dynamic> parentView, int parentIndex) {
   return new _ViewAppComponentHost0(parentView, parentIndex);
 }
 
