@@ -46,7 +46,7 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
   var _expr_0;
   var _expr_1;
   static RenderComponentType _renderType;
-  ViewAppComponent0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.COMPONENT, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
+  ViewAppComponent0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.component, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways) {
     rootEl = import2.document.createElement('my-app');
     _renderType ??= import9.appViewUtils.createRenderType('', ViewEncapsulation.None, styles$AppComponent);
     setupComponentType(_renderType);
@@ -77,8 +77,8 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     _DefaultValueAccessor_11_5 = new import3.DefaultValueAccessor(_el_11);
     _NgValueAccessor_11_6 = [_DefaultValueAccessor_11_5];
     _NgModel_11_7 = new import5.NgModel(null, _NgValueAccessor_11_6);
-    _el_11.addEventListener('input', eventHandler1(_handle_input_11_1));
     _el_11.addEventListener('blur', eventHandler0(_DefaultValueAccessor_11_5.touchHandler));
+    _el_11.addEventListener('input', eventHandler1(_handle_input_11_2));
     final subscription_0 = _NgModel_11_7.update.listen(eventHandler1(_handle_ngModelChange_11_0));
     init(const [], [subscription_0]);
     return null;
@@ -125,8 +125,8 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
     ctx.hero.name = $event;
   }
 
-  void _handle_input_11_1($event) {
-    _DefaultValueAccessor_11_5.onChange($event.target.value);
+  void _handle_input_11_2($event) {
+    _DefaultValueAccessor_11_5.handleChange($event.target.value);
   }
 }
 
@@ -139,7 +139,7 @@ const List<dynamic> styles$AppComponentHost = const [];
 class _ViewAppComponentHost0 extends AppView<dynamic> {
   ViewAppComponent0 _compView_0;
   import1.AppComponent _AppComponent_0_5;
-  _ViewAppComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.HOST, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
+  _ViewAppComponentHost0(AppView<dynamic> parentView, int parentIndex) : super(import7.ViewType.host, {}, parentView, parentIndex, ChangeDetectionStrategy.CheckAlways);
   @override
   ComponentRef build() {
     _compView_0 = new ViewAppComponent0(this, 0);
