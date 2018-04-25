@@ -86,9 +86,6 @@ class ViewAppComponent0 extends AppView<import1.AppComponent> {
 
   @override
   dynamic injectorGetInternal(dynamic token, int nodeIndex, dynamic notFoundResult) {
-    if ((identical(token, import3.DefaultValueAccessor) && (11 == nodeIndex))) {
-      return _DefaultValueAccessor_11_5;
-    }
     if ((identical(token, const import11.MultiToken<import12.ControlValueAccessor>('NgValueAccessor')) && (11 == nodeIndex))) {
       return _NgValueAccessor_11_6;
     }
